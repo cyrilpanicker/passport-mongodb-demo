@@ -1,0 +1,16 @@
+<% include ../partials/header %>
+
+    <form method="POST" action="/register" >
+        <div><input name="name" placeholder="Name" /></div>
+        <div><input name="username" placeholder="Username" /></div>
+        <div><input name="password" placeholder="Password" /></div>
+        <div><button type="submit">Register</button></div>
+    </form>
+
+    <% if(typeof error != 'undefined' && error.length > 0){ %>
+        <% error.forEach(function(item){ %>
+            <%= item %>
+        <% }) %>
+    <% } %>
+
+<% include ../partials/footer %>

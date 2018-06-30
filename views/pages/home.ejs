@@ -1,0 +1,15 @@
+<% include ../partials/header %>
+
+    <% if(typeof user !== 'undefined'){ %>
+        <h2>Hi <%= user.name %></h2>
+    <% }else{ %>
+        <h2>Home</h2>
+    <% } %>
+
+    <a href="/about">About</a>
+
+    <% if(typeof user !== 'undefined'){ %>
+        <a href="/logout" >logout</a>
+    <% } %>
+
+<% include ../partials/footer %>
